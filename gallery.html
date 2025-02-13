@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Himalaya Darshan College Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="gallery.css" />
+</head>
+
+<body>
+    <section class="gallery">
+        <div class="container">
+            <h2>Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/gallery/image1.jpg" alt="Gallery Image 1" onclick="openLightbox();showImage(1)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image2.jpg" alt="Gallery Image 2" onclick="openLightbox();showImage(2)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image3.jpg" alt="Gallery Image 3" onclick="openLightbox();showImage(3)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image4.jpg" alt="Gallery Image 4" onclick="openLightbox();showImage(4)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image5.jpg" alt="Gallery Image 5" onclick="openLightbox();showImage(5)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image6.jpg" alt="Gallery Image 6" onclick="openLightbox();showImage(6)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image7.jpg" alt="Gallery Image 7" onclick="openLightbox();showImage(7)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image8.jpg" alt="Gallery Image 8" onclick="openLightbox();showImage(8)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image9.jpg" alt="Gallery Image 9" onclick="openLightbox();showImage(9)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image10.jpg" alt="Gallery Image 10" onclick="openLightbox();showImage(10)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image11.jpg" alt="Gallery Image 11" onclick="openLightbox();showImage(11)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image12.jpg" alt="Gallery Image 12" onclick="openLightbox();showImage(12)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image13.jpg" alt="Gallery Image 13" onclick="openLightbox();showImage(13)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image14.jpg" alt="Gallery Image 14" onclick="openLightbox();showImage(14)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image15.jpg" alt="Gallery Image 15" onclick="openLightbox();showImage(15)">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/image16.jpg" alt="Gallery Image 16" onclick="openLightbox();showImage(16)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-controls">
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+
+</html>

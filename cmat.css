@@ -1,0 +1,93 @@
+/* CMAT Registration Form Styling */
+
+.cmat-registration {
+    padding: 60px 0;
+    background-color: #ffffff;
+    /* White background for form section */
+}
+
+.cmat-registration h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #3498db;
+    /* Consistent primary color for headings */
+}
+
+.registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    /* Light background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    /* Dark color for labels */
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    /* Primary color for the button */
+    color: #ffffff;
+    /* White text */
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    /* Darker shade on hover */
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .registration-form {
+        padding: 20px;
+    }
+    .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
