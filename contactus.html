@@ -119,7 +119,55 @@
             </div>
         </div>
     </section>
+<!-- here goes backend with wordpress or php to handle form submission -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-form");
 
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const subject = document.getElementById("subject").value.trim();
+          const message = document.getElementById("message").value.trim();
+          // Simple regex for email validation (can be improved later)
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert("❌ Please enter a valid email address!");
+            return; // stop form submission here
+          }
+
+          fetch("https://kaushalkarna.infinityfreeapp.com/wp-json/college/v1/submit/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              subject: subject,
+              message: message,
+            }),
+          })
+          .then(async (response) => {
+              const data = await response.json();
+              if (!response.ok) {
+                alert(`❌ ${data.message || "Something went wrong!"}`);
+                return;
+              }
+              alert("✅ Message sent successfully!");
+              form.reset(); // Reset the form after successful submission
+              console.log(data);
+            })
+            .catch((error) => {
+              alert("❌ Network error, please try again!");
+              console.error(error);
+            });
+        });
+      });
+    </script>
+  
 </body>
 
 </html>
